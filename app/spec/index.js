@@ -1,7 +1,7 @@
 const { expect } = require("chai");
-const { doSomething } = require("../app/utils");
+const { doSomething } = require("../utils");
 
-describe("doSomething", () => {
+describe("doSomething ", () => {
   it("returns true", () => {
     expect(doSomething()).to.be.true;
   });
