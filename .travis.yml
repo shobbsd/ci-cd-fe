@@ -6,6 +6,12 @@ jobs:
     - stage: test
       name: Util testing
       script: npm test
+    - stage: integration tests
+      name: Integration tests
+      before_script: npm install -g cypress serve
+      script: |
+        npm run build 
+        serve -s build & CYPRESS_baseUrl=http://localhost:5000 cypress run
 
 env:
   global:
