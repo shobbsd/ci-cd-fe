@@ -5,7 +5,10 @@ jobs:
   include:
     - stage: tests
       name: Util testing
-      script: cd app && npm test
+      before_script: |
+        cd app 
+        npm install
+      script: npm test
     - stage: tests
       name: Integration tests
       before_script: npm install -g cypress serve
