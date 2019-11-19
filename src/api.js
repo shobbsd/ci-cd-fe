@@ -1,6 +1,8 @@
 const baseURL = process.env.baseURL || "http://localhost:9090";
 const axios = require("axios").create({ baseURL });
 
+console.log(process.env);
+
 export const getArticles = () => {
   return axios.get("/api/articles").then(({ data }) => data.articles);
 };
