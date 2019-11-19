@@ -10,8 +10,9 @@ jobs:
       name: Integration tests
       before_script: npm install -g cypress serve
       script: |
-      npm run build 
-      serve -s build & CYPRESS_baseUrl=http://localhost:5000 cypress run
+        npm run build 
+        serve -s build & CYPRESS_baseUrl=http://localhost:5000 cypress run
+
 env:
   global:
     secure: LhbheluRqndH9m6oa/VfiyQ3EzPqnwJwIz6YUofhq03Lb2lVrt5AgIJdEet3XgqLvv6ZyZilnUCnAfMdTVYQk4QNdN2SsbzCr4QZKMwLrbl0qJm9htuB1fkRNeONc4DbLiMWeisBHfeyMJwYpvmAFdl17epEQjcCtP71J5hw/hwlomRDeQWs+JHZgQ9pWo8lrYbNMO8g+9Rncst8hr2+SOfe8OiPBqmOM4yxbBAGkrmbSBJCr/c7VnfRwIaGb7BbKBkGF/wZy69pFIxiHqx1rQE4coJHOGcg3yJlxdEsGcnNZ1inXfmN2PetAkGeCOgWzkm+Pn4l1fFod5Fe5G9C4691YIBU6DhlvZvmBIACuntKp8SCTYSur38iIDBCgHxQPIz/Pm1uNhRK8qPaulLAiB+2wddberZIy2V9mTorGDaYeX/dMC6zqoupDEiXsaOpNLxfzZ2Itw4lcTvJ4KosjQG38GqFnxJMV8a2ZUGAU2uel9JduS5SCWT1w4H24OXtxrN+QVDR+3wVGy4IBb3/LIbaKn/s87J8rGVVBYSeSzzUlY6S8FmH8JNoVNUuUeuax7zxZMAcRgIAs1IYvYtymsYzpjdtSoqtJTfDtyEvt1Z50fme88liRxS70S0URiv5llu3BgckdQMyVrdrqNiCGG6ltBXreFCWwq/FgmmRmok=
