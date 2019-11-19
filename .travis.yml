@@ -3,15 +3,13 @@ node_js:
   - node
 jobs:
   include:
-    - stage: test
+    - stage: tests
       name: Util testing
-      script: npm test
-    - stage: integration tests
+      script: cd app && npm test
+    - stage: tests
       name: Integration tests
       before_script: npm install -g cypress serve
-      script: |
-        npm run build 
-        serve -s build & CYPRESS_baseUrl=http://localhost:5000 cypress run
+      script: docker-compose up --build --abort-on-container-exit --exit-code-from cypress
 
 env:
   global:

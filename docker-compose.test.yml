@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  web:
+    build: .
+    ports:
+      - 5000:5000
+
+  cypress:
+    image: cypress/included:3.2.0
+    environment:
+      - CYPRESS_baseUrl=http://web:5000
+    working_dir: /e2e
+    volumes:
+      - type: bind
+        source: ./e2e
+        target: /e2e
+    command: npx cypress run
+    depends_on:
+      - web
