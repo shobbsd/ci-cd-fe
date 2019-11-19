@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const { doSomething } = require("../utils");
+const { doSomething } = require("../app/utils");
 
 describe("doSomething", () => {
   it("returns true", () => {
